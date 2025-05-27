@@ -1,0 +1,125 @@
+@font-face {
+    font-family: "SF Pro";
+    src: url(./font/SFPRODISPLAYREGULAR.OTF);
+}
+
+body{
+    background-color: white;
+    height: 98dvh;
+    display: grid;
+    place-items: center;
+    font-family: "SF Pro" , sans-serif;
+}
+
+.container{
+    width: 400px;
+    background-color: black;
+    box-shadow: 8px 9px 10px black;
+    border-radius: 10px;
+    padding: 20px;
+}
+
+.buttons{
+    display: grid;
+    grid-template-columns: 88px 88px 88px 88px;
+    grid-template-rows: 88px 88px 88px 88px 88px;
+    place-items: center;
+    gap: 14px;
+}
+
+.button{
+    color: white;
+    font-size: 40px;
+    border: 0;
+    border-radius: 50%;
+    width: 88px;
+    height: 88px;
+    display: grid;
+    place-items: center;
+    background-color: #333333;
+}
+
+.button:hover{
+    cursor: pointer;
+}
+
+#clear, #advanceOperator{
+    background-color: #A5A5A5;
+    color: black;
+    font-size: 34px;
+}
+
+#operator, #equal{
+    background-color: #F1A33B;
+    color: white;
+    font-size: 40px;
+}
+
+div[name="zero"]{
+    grid-column: 1 / span 2;
+    width: 190px;
+    border-radius: 50px;
+}
+
+.result{
+    width: 100%;
+    height: 107px;
+    font-size: 90px;
+    color: white;
+    text-align: end;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.archive{
+    width: 100%;
+    height: 42px;
+    font-size: 35px;
+    color: white;
+    opacity: 50%;
+    text-align: end;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+@media (max-width: 470px) {
+    .container {
+        width: 270px;
+        padding: 10px;
+    }
+
+    .buttons {
+        grid-template-columns: 60px 60px 60px 60px;
+        grid-template-rows: 60px 60px 60px 60px 60px;
+        gap: 10px;
+    }
+
+    .button {
+        font-size: 28px;
+        width: 60px;
+        height: 60px;
+    }
+
+    #clear, #advanceOperator {
+        font-size: 24px;
+    }
+
+    #operator, #equal {
+        font-size: 28px;
+    }
+
+    div[name="zero"] {
+        width: 130px;
+        border-radius: 50px;
+    }
+
+    .result {
+        height: 80px;
+        font-size: 60px;
+    }
+
+    .archive {
+        height: 30px;
+        font-size: 24px;
+    }
+}
